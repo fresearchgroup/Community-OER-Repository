@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load staticfiles %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>DSpaceX</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="{% static 'css/simple-sidebar.css' %}" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid" style="margin-top: 150px">
+                {% if success_flag %}
+                	<h2 id = 'results'>Success</h2>
+                {% else %}
+                	<h2 id = 'results'>Failed</h2>
+                {% endif%}
+                <hr>
+                <a href="{% url 'createCommunityArticle' %}" class="btn btn-dark btn-lg" id="create_community_articles">Check for Community Articles</a><br><br><hr>
+                <h3>{{ msg }}</h3>
+                {% if data %}
+                    <h4>Communities Created in DSpace</h4>
+               	    {% for name in data %}
+                        <p><strong>{{ name }}</h5><p></strong>
+                    {% endfor %}
+                {% endif %}
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+    <!-- Menu Toggle Script 
+    <script>
+    $("#menu-toggle").mouseover(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    </script>
+    -->
+</body>
+
+</html>
