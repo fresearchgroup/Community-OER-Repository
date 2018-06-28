@@ -29,7 +29,7 @@ The url of the collaboration system,Dspace and the DSpace Domain along with the 
 ---
 ## Start the App  
  - Clone the repository and navigate into the Main Directory.  
-   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ``` git clone      https://github.com/srujanprophet/Community-OER-Repository.git ```  
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ``` git clone      https://github.com/fresearchgroup/Community-OER-Repository.git ```  
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ```cd CollabOER-project ```
  - Start the Server :  
    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ```python manage.py runserver```
